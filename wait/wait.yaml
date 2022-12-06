@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: wait
+spec:
+  serviceAccountName: jobs-reader
+  containers:
+    - image: rhzx3519/wait
+      name: wait
+      args: [job, pi]
